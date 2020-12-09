@@ -14,6 +14,16 @@
     <param name="global_frame_id" value="map"/>
     <param name="initial_pose_x" value="0"/>
     <param name="initial_pose_y" value="0"/>
+    <param name="initial_pose_a" value="4.7"/>
+    <param name="initial_cov_xx" value=".1"/>
+    <param name="initial_cov_yy" value=".1"/>
+    <param name="initial_cov_aa" value=".2"/>
+<!--     <param name="laser_min_range" value=".1"/> -->
+    <param name="udpate_min_a" value="0.0"/>
+    <param name="udpate_min_d" value="0.0"/>
+    <param name="gui_publish_rate" value="1"/>
+<!--    <param name="gui_publish_rate" value="1"/> -->
+
   </node>
 
   <!-- Move Base -->
