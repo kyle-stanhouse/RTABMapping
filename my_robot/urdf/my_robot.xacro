@@ -7,7 +7,7 @@
   <link name="robot_footprint"></link>
 
   <joint name="robot_footprint_joint" type="fixed">
-    <origin xyz="0 0 0" rpy="0 0 0" />
+    <origin xyz="0 0 .1" rpy="0 0 0" />
     <parent link="robot_footprint"/> 
     <child link="chassis" />
   </joint>
@@ -216,14 +216,14 @@
   
   <link name="hokuyo">
     <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="0 0 .25" rpy="0 0 0"/>
       <geometry>
 	<box size="0.1 0.1 0.1"/>
       </geometry>
     </collision>
 
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="0 0 .25" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://my_robot/meshes/hokuyo.dae"/>
       </geometry>

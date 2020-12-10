@@ -4,8 +4,8 @@
    <arg name="map_file" default="$(find my_robot)/maps/map.yaml"/>
   <!-- <arg name="map_file" default="/home/parallels/workspace/catkin_ws_localization/src/Localization/maps/map.pgm"/> -->
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
-  <node pkg="tf" type="static_transform_publisher" name="map_odom_broadcaster"
-              args="0 0 4.7 0 0 0 map odom 100"/>
+  <!-- <node pkg="tf" type="static_transform_publisher" name="map_odom_broadcaster"
+              args="0 0 4.7 0 0 0 map odom 100"/> -->
 
   <!-- AMCL Node -->
   <node name="amcl" pkg="amcl" type="amcl" output="screen">
