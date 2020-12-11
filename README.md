@@ -1,10 +1,51 @@
-# Localization, 'WhereAmI' project
+# Localization/'WhereAmI' project
 
 ## Summary
 
 Create a ROS package that launches a custom robot model in a custom Gazebo world.\
 Utilize the ROS AMCL package and the Tele-Operation / Navigation Stack to localize the robot.\
 Explore, add, and tune specific parameters corresponding to each package to achieve the best possible localization results.
+
+## Directory Structure
+
+```
+    .Localization                      # WhereAmI Project
+    ├── my_robot                       # my_robot package                   
+    │   ├── launch                     # launch folder for launch files   
+    │   │   ├── robot_description.launch
+    │   │   ├── world.launch
+    │   │   ├── amcl.launch
+    │   ├── meshes                     # meshes folder for sensors (lidar)
+    │   │   ├── hokuyo.dae
+    │   ├── urdf                       # urdf folder for xacro description files
+    │   │   ├── my_robot.gazebo
+    │   │   ├── my_robot.xacro
+    │   ├── world                      # world folder for world files
+    │   │   ├── ball_chaser_world.world
+    │   │   ├── ball_chaser_world_map.world # use to generate map 
+    │   ├── rviz                      # rviz folder for description files
+    │   │   ├── gochaseit.rviz
+    │   ├── maps                      # map for localization and yaml file
+    │   │   ├── map.pgm
+    │   │   ├── map.yaml    
+    │   ├── CMakeLists.txt             # compiler instructions
+    │   ├── package.xml                # package info
+    ├── ball_chaser_OOP                # ball_chaser_OOP package     
+    │   ├── include
+    │   │   ├── ball_chaser_OOP
+    │   │   │   ├── ProcessImage.h
+    │   │   │   ├── DriveBot.h
+    │   ├── launch                     # launch folder for launch files   
+    │   │   ├── ball_chaser_oop.launch
+    │   ├── src                        # source folder for C++ scripts
+    │   │   ├── drive_bot.cpp
+    │   │   ├── process_images_oop.cpp
+    │   ├── srv                        # service folder for ROS services
+    │   │   ├── DriveToTarget.srv
+    │   ├── CMakeLists.txt             # compiler instructions
+    │   ├── package.xml                # package info                  
+    └──        
+```
 
 ## Dependencies
 
