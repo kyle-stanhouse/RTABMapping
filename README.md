@@ -10,11 +10,17 @@ Explore, add, and tune specific parameters corresponding to each package to achi
 
 ```
     .Localization                      # WhereAmI Project
+    ├── README.md                       # my_robot package 
     ├── my_robot                       # my_robot package                   
     │   ├── launch                     # launch folder for launch files   
     │   │   ├── robot_description.launch
     │   │   ├── world.launch
     │   │   ├── amcl.launch
+    │   ├── config                     # config files for nav  
+    │   │   ├── base_local_planner_params.yaml
+    │   │   ├── costmap_common_params.yaml
+    │   │   ├── global_costmap_params.yaml
+    │   │   ├── local_costmap_params.yaml    
     │   ├── meshes                     # meshes folder for sensors (lidar)
     │   │   ├── hokuyo.dae
     │   ├── urdf                       # urdf folder for xacro description files
@@ -30,21 +36,6 @@ Explore, add, and tune specific parameters corresponding to each package to achi
     │   │   ├── map.yaml    
     │   ├── CMakeLists.txt             # compiler instructions
     │   ├── package.xml                # package info
-    ├── ball_chaser_OOP                # ball_chaser_OOP package     
-    │   ├── include
-    │   │   ├── ball_chaser_OOP
-    │   │   │   ├── ProcessImage.h
-    │   │   │   ├── DriveBot.h
-    │   ├── launch                     # launch folder for launch files   
-    │   │   ├── ball_chaser_oop.launch
-    │   ├── src                        # source folder for C++ scripts
-    │   │   ├── drive_bot.cpp
-    │   │   ├── process_images_oop.cpp
-    │   ├── srv                        # service folder for ROS services
-    │   │   ├── DriveToTarget.srv
-    │   ├── CMakeLists.txt             # compiler instructions
-    │   ├── package.xml                # package info                  
-    └──        
 ```
 
 ## Dependencies
@@ -85,7 +76,7 @@ Open up terminal 2\
 `$ roslaunch my_robot amcl.launch`
 
 ## Testing
-Option 1: Send 2D Navigation Goal\
+* Option 1: Send 2D Navigation Goal\
 Your first option would be sending a 2D Nav Goal from RViz.\
 The move_base will try to navigate your robot based on the localization.\
 Based on the new observation and the odometry, the robot to further perform the localization.
@@ -94,10 +85,10 @@ Click the 2D Nav Goal button in the toolbar, then click and drag on the map to s
 It will start moving and localize itself in the process.\
 If you would like to give amcl node a nudge, you could give the robot an initial position estimate on the map using 2D Pose Estimate.
 
-Note: You will notice that currently my simulation does not execute Nav 2D commands well, and therefore it is better to use the tele-op option.\
+* Note: You will notice that currently my simulation does not execute Nav 2D commands well, and therefore it is better to use the tele-op option.\
 I have submitted the project without this feaure completely working due to the fact that it is not included in the project rubric.
 
-Option 2: Use teleop Node
+* Option 2: Use teleop Node
 You could also use teleop node to control your robot and observe it localize itself in the environment if you have set up the optional tele-op pkg.\
 Open another terminal and launch the teleop script: '$rosrun teleop_twist_keyboard teleop_twist_keyboard.py`\
 
