@@ -90,7 +90,7 @@ Open up terminal 2\
 
 * Option 2: Use tele-op pkg
   You could also use teleop node to control your robot and observe it localize itself in the environment if you have set up the optional tele-op pkg.\
-  Open another terminal and launch the teleop script: `$rosrun teleop_twist_keyboard teleop_twist_keyboard.py`\
+  Open another terminal and launch the teleop script: `$rosrun teleop_twist_keyboard teleop_twist_keyboard.py`
 
   You should be able to control your robot using keyboard commands. Follow the instruction in the terminal for which keys to use
 
