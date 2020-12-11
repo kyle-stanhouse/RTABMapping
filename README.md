@@ -98,7 +98,7 @@ Option 2: Use teleop Node
 You could also use teleop node to control your robot and observe it localize itself in the environment,\
 if you have set it up in the Optional: Teleop Package part.\
 
-Open another terminal and launch the teleop script: rosrun teleop_twist_keyboard teleop_twist_keyboard.py\
+Open another terminal and launch the teleop script: '$rosrun teleop_twist_keyboard teleop_twist_keyboard.py`\
 
 You could control your robot by keyboard commands now.\
 
