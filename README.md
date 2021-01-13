@@ -1,4 +1,6 @@
-# 'WhereAmI' project
+# 'Map My World' project
+
+THE CONTENT BELOW IS NOT APPLICABLE TO MAP MY WORLD PROJECT
 
 ## Summary
 
