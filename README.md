@@ -1,7 +1,5 @@
 # 'Map My World' project
 
-THE CONTENT BELOW IS NOT APPLICABLE TO MAP MY WORLD PROJECT
-
 ## Summary
 
 Create a 2D occupancy grid and 3D octomap from a simulated environment using my own robot with the RTAB-Map package (rtabmap_ros).
